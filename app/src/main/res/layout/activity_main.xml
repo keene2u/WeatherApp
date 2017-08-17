@@ -1,0 +1,135 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+  <!--/>-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--tools:context="com.example.administrator.weatherapp.MainActivity">-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Hello World!"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--app:layout_constraintRight_toRightOf="parent"-->
+        <!--app:layout_constraintTop_toTopOf="parent" />-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    android:background="#2196F3"
+    android:layout_margin="16dp">
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2">
+        <TableRow>
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/temperature"
+                android:drawableLeft="@drawable/ic_temperature"
+                android:drawableRight="@drawable/ic_celcius"
+                />
+        </TableRow>
+        <TableRow>
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                />
+        </TableRow>
+        <TableRow>
+        <Button
+            android:id="@+id/btn_refresh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Refresh"
+            android:clickable="true"
+            android:onClick="onClick"
+            android:textColor="#FFFFFF"
+            android:background="#3F51B5"
+            android:layout_marginRight="6dp"
+            />
+    </TableRow>
+    </TableLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="3"
+        >
+
+        <TableRow>
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/humidity"
+                android:drawableLeft="@drawable/ic_humidity"
+                />
+        <!--</TableRow>-->
+        <!--<TableRow>-->
+            <TextView
+                android:id="@+id/wind_speed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wind_speed"
+                android:drawableLeft="@drawable/ic_wind"
+                />
+        <!--</TableRow>-->
+        <!--<TableRow>-->
+            <TextView
+                android:id="@+id/cloudiness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cloudiness"
+                android:drawableLeft="@drawable/ic_wind"
+                />
+        </TableRow>
+    </TableLayout>
+    <!--<TextView-->
+        <!--android:id="@+id/button_refresh"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:drawableTop="@drawable/ic_refresh"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/refresh"-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="onClick"-->
+        <!--/>-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="CREDIT Climacons by @adamwhitcroft"
+        android:textColor="#FFFFFF"
+        >
+    </TextView>
+    </TableLayout>
+</LinearLayout>
+
+<!--</android.support.constraint.ConstraintLayout>-->

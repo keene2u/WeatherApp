@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+        <string name="location">Kuala Lumpur</string>
+        <string name="temperature">Temperature</string>
+        <string name="wind_speed">Wind speed</string>
+        <string name="cloudiness">Cloudiness</string>
+    <string name="humidity">humidity</string>
+    <string name="refresh">Refresh</string>
+    <string name="btn_refresh" type="id">Refresh</string>
+    </resources>
