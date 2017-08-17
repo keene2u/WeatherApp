@@ -38,10 +38,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         tvTemperature = (TextView) findViewById(R.id.temperature);
-        //double displayTemp =R.id.temperature - 273.15;
-        //tvTemperature = (TextView) findViewById((String.valueOf(displayTemp)));
-        //tvTemperature.setText(String.format("%.2f", displayTemp));
 
+        //tvTemperature = (TextView) findViewById((String.valueOf(displayTemp)));
+        //tvTemperature = String.format("%.2f",displayTemp);
+        //tvTemperature.setText(String.format("%.2f", displayTemp));
         //tvTemperature = (TextView) displayTemp;
 
         tvHumidity = (TextView) findViewById(R.id.humidity);
@@ -119,7 +119,11 @@ public class MainActivity extends AppCompatActivity {
                     tvWindSpeed.setText(String.valueOf(weatherJSON.getJSONObject("wind").getDouble("speed")) + " mps");
                     tvCloudiness.setText(String.valueOf(weatherJSON.getJSONObject("clouds").getInt("all"))+"%");
                     final JSONObject mainJSON = weatherJSON.getJSONObject("main");
-                    tvTemperature.setText(String.valueOf(mainJSON.getDouble("temp")));
+
+                    double displayTemp = mainJSON.getDouble("temp") - 273.15;
+                    tvTemperature.setText(String.format("%.2f", displayTemp));
+
+                    //tvTemperature.setText(String.valueOf(mainJSON.getDouble("temp")));
                     tvHumidity.setText(String.valueOf(mainJSON.getInt("humidity"))+"%");
 
                     final JSONArray weatherJSONArray = weatherJSON.getJSONArray("weather");
